@@ -1,210 +1,346 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 	<meta charset="UTF-8">
-	<title>Veille Technologique - Angular & Java | Gen-Z Web</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background: #f0f0f0;
-			color: #333;
-			margin: 0;
-			padding: 0;
-		}
-
-		.container {
-			width: 1000px;
-			margin: 0 auto;
-			background: #fff;
-			padding: 20px;
-			border: 1px solid #ccc;
-		}
-
-		.header {
-			text-align: center;
-			margin-bottom: 20px;
-		}
-
-		.header h1 {
-			margin-bottom: 5px;
-		}
-
-		.tech-tabs {
-			text-align: center;
-			margin-bottom: 20px;
-		}
-
-		.tab-btn {
-			padding: 10px 20px;
-			margin: 0 5px;
-			border: 1px solid #ccc;
-			background: #eee;
-			cursor: pointer;
-		}
-
-		.tab-btn.active {
-			background: #ddd;
-			font-weight: bold;
-		}
-
-		.content-area {
-			border: 1px solid #ccc;
-			padding: 20px;
-			background: #fafafa;
-		}
-
-		.tech-section {
-			display: none;
-		}
-
-		.tech-section.active {
-			display: block;
-		}
-
-		.category {
-			margin-bottom: 20px;
-		}
-
-		.category h3 {
-			margin-bottom: 10px;
-			color: #444;
-		}
-
-		.library-item,
-		.paradigm-item {
-			border: 1px solid #ccc;
-			background: #fff;
-			padding: 10px;
-			margin-bottom: 10px;
-		}
-
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			margin: 15px 0;
-		}
-
-		th,
-		td {
-			border: 1px solid #ccc;
-			padding: 8px;
-			text-align: left;
-		}
-
-		th {
-			background: #eee;
-		}
-
-		.sources {
-			margin-top: 30px;
-		}
-
-		.sources h3 {
-			margin-bottom: 10px;
-		}
-
-		.sources a {
-			display: block;
-			color: #0066cc;
-			text-decoration: none;
-			margin-bottom: 5px;
-		}
-
-		.sources a:hover {
-			text-decoration: underline;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Veille technologique - Angular & Java | Gen-Z Web</title>
+	<link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-	<div class="container">
-		<div class="header">
-			<h1>Veille Technologique</h1>
-			<p>Angular & Java - Gen-Z Web</p>
-		</div>
+	<div class="page-shell">
+		<header class="hero">
+			<p class="eyebrow">Projet de veille technologique</p>
+			<h1>Angular & Java pour le projet Gen-Z Web</h1>
+			<p class="hero-text">
+				Cette veille présente les choix techniques les plus pertinents pour construire une application e-commerce
+				moderne avec une architecture en couches, un front Angular et un back-end Java / Spring Boot.
+			</p>
+		</header>
 
-		<div class="tech-tabs">
-			<button class="tab-btn active" onclick="showTech('angular')">Angular</button>
-			<button class="tab-btn" onclick="showTech('java')">Java</button>
-		</div>
+		<main class="container">
+			<section class="overview">
+				<h2>Vision du projet</h2>
+				<p>
+					L'objectif est de mettre en place une veille tech utile au projet en comparant les outils, les
+					librairies et les paradigmes qui permettent de développer plus vite, de tester correctement et de
+					faire évoluer l'application sans fragiliser le code.
+				</p>
 
-		<div class="content-area">
-			<!-- Angular -->
-			<div class="tech-section active" id="angular-section">
-				<h2>Angular</h2>
-				<div class="category">
-					<h3>Librairies de test</h3>
-					<div class="library-item">Jasmine + Karma : framework de test par défaut</div>
-					<div class="library-item">Jest : alternative moderne, rapide</div>
-					<div class="library-item">Cypress : tests end-to-end</div>
+				<div class="overview-grid">
+					<article class="overview-card">
+						<h3>Architecture retenue</h3>
+						<p>
+							Une architecture en couches avec API REST est adaptée au besoin : composants et services côté
+							Angular, puis contrôleurs, services métier, repositories et persistance côté Spring Boot.
+						</p>
+					</article>
+					<article class="overview-card">
+						<h3>Pourquoi cette approche</h3>
+						<p>
+							Elle reste claire, économique à mettre en place pour un MVP, facile à tester par couche et
+							prête à évoluer si la plateforme grandit.
+						</p>
+					</article>
+					<article class="overview-card">
+						<h3>Axes de veille</h3>
+						<p>
+							La veille se concentre sur les tests, les composants visuels, les frameworks utiles au projet
+							et les paradigmes de programmation les plus adaptés.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section class="tech-panel">
+				<div class="tech-tabs" role="tablist" aria-label="Choix technologiques">
+					<button class="tab-btn active" type="button" data-tech="angular">Angular</button>
+					<button class="tab-btn" type="button" data-tech="java">Java / Spring</button>
 				</div>
 
-				<div class="category">
-					<h3>Librairies UI</h3>
-					<div class="library-item">Angular Material : officiel, Material Design</div>
-					<div class="library-item">PrimeNG : composants riches</div>
+				<div class="content-area">
+					<section class="tech-section active" id="angular-section">
+						<div class="section-heading">
+							<h2>Angular</h2>
+							<p>
+								Angular constitue la base du front-end. Il permet de construire une interface structurée,
+								modulaire et adaptée à une application riche avec formulaires, navigation et appels API.
+							</p>
+						</div>
+
+						<div class="category">
+							<h3>Librairies de test</h3>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Jasmine + Karma</h4>
+									<a class="source-link" href="https://jasmine.github.io/" target="_blank" rel="noopener noreferrer">Source Jasmine</a>
+								</div>
+								<p>
+									Jasmine fournit une syntaxe simple pour écrire les tests unitaires, tandis que Karma
+									lance ces tests dans différents navigateurs.
+								</p>
+								<p class="item-note">
+									Pour Gen-Z Web, ce duo est intéressant car il est intégré nativement à l'écosystème Angular
+									et bien documenté.
+									<a class="inline-source" href="https://karma-runner.github.io/" target="_blank" rel="noopener noreferrer">Source Karma</a>
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Jest</h4>
+									<a class="source-link" href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Jest est une alternative plus rapide pour exécuter des tests unitaires avec une bonne
+									expérience développeur et des sorties lisibles.
+								</p>
+								<p class="item-note">
+									Il peut être envisagé si le projet cherche à accélérer le cycle de feedback pendant le
+									développement.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Cypress</h4>
+									<a class="source-link" href="https://www.cypress.io/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Cypress est utilisé pour les tests end-to-end. Il reproduit des parcours utilisateurs
+									complets comme la navigation, la connexion ou un futur tunnel d'achat.
+								</p>
+								<p class="item-note">
+									C'est un bon choix pour fiabiliser les fonctionnalités critiques de l'interface.
+								</p>
+							</article>
+						</div>
+
+						<div class="category">
+							<h3>Librairies UI</h3>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Angular Material</h4>
+									<a class="source-link" href="https://material.angular.io/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Angular Material propose des composants prêts à l'emploi, cohérents visuellement et
+									compatibles avec les bonnes pratiques d'accessibilité.
+								</p>
+								<p class="item-note">
+									Pour un MVP e-commerce, il réduit le temps de développement sur les boutons, formulaires,
+									dialogues et éléments de navigation.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>PrimeNG</h4>
+									<a class="source-link" href="https://www.primefaces.org/primeng/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									PrimeNG complète Angular avec des composants riches comme des tableaux, carrousels ou
+									éléments plus avancés pour des besoins métier spécifiques.
+								</p>
+								<p class="item-note">
+									Il peut être utile si Gen-Z Web veut intégrer rapidement des composants complexes sans les
+									développer de zéro.
+								</p>
+							</article>
+						</div>
+
+						<div class="category">
+							<h3>Paradigmes de programmation</h3>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Programmation réactive avec RxJS</h4>
+									<a class="source-link" href="https://rxjs.dev/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									RxJS simplifie la gestion des flux asynchrones, par exemple les appels HTTP, la recherche,
+									les filtres ou les mises à jour d'interface.
+								</p>
+								<p class="item-note">
+									Ce paradigme rend le front plus propre et plus maintenable lorsque les données circulent
+									entre plusieurs composants.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Approche composantielle et déclarative</h4>
+									<a class="source-link" href="https://angular.dev/guide/architecture" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Angular s'appuie sur des composants réutilisables et des templates déclaratifs qui rendent
+									l'interface plus lisible et plus facile à faire évoluer.
+								</p>
+								<p class="item-note">
+									Cela favorise une séparation claire entre affichage, logique et données.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Programmation orientée objet avec TypeScript</h4>
+									<a class="source-link" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									TypeScript apporte typage, interfaces et classes, ce qui aide à modéliser proprement les
+									données et à sécuriser le développement.
+								</p>
+								<p class="item-note">
+									C'est pertinent pour un projet qui doit rester robuste et maintenable dans le temps.
+								</p>
+							</article>
+						</div>
+					</section>
+
+					<section class="tech-section" id="java-section">
+						<div class="section-heading">
+							<h2>Java / Spring Boot</h2>
+							<p>
+								Java et Spring Boot structurent le back-end du projet. Ils permettent de construire une API
+								REST fiable, testable et bien organisée autour de la logique métier.
+							</p>
+						</div>
+
+						<div class="category">
+							<h3>Librairies de test</h3>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>JUnit 5</h4>
+									<a class="source-link" href="https://junit.org/junit5/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									JUnit 5 est le standard pour les tests unitaires en Java. Il offre une base solide pour
+									vérifier les services, les règles métier et les composants critiques.
+								</p>
+								<p class="item-note">
+									Pour Gen-Z Web, il apporte une solution fiable, mature et largement adoptée.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Mockito</h4>
+									<a class="source-link" href="https://site.mockito.org/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Mockito permet de simuler des dépendances pour isoler la logique métier pendant les tests.
+								</p>
+								<p class="item-note">
+									Il est utile pour tester un service sans dépendre immédiatement de la base de données ou
+									d'autres composants.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Spring Boot Test + TestContainers</h4>
+									<a class="source-link" href="https://docs.spring.io/spring-boot/reference/testing/index.html" target="_blank" rel="noopener noreferrer">Source Spring Boot Test</a>
+								</div>
+								<p>
+									Spring Boot Test facilite les tests d'intégration et TestContainers permet de lancer des
+									environnements réels dans des conteneurs, par exemple une base de données.
+								</p>
+								<p class="item-note">
+									Ce choix est cohérent avec une architecture en couches où chaque niveau doit être validé de
+									manière fiable.
+									<a class="inline-source" href="https://www.testcontainers.org/" target="_blank" rel="noopener noreferrer">Source TestContainers</a>
+								</p>
+							</article>
+						</div>
+
+						<div class="category">
+							<h3>Frameworks et couche serveur</h3>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Spring Boot</h4>
+									<a class="source-link" href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Spring Boot simplifie la création d'une API REST avec une configuration rapide, un écosystème
+									riche et une bonne intégration aux pratiques de production.
+								</p>
+								<p class="item-note">
+									Il répond bien à l'objectif du projet : développer vite un back-end propre, testable et prêt
+									à évoluer.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Thymeleaf</h4>
+									<a class="source-link" href="https://www.thymeleaf.org/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Thymeleaf est un moteur de templates Java. Il peut servir pour des vues serveur ou des pages
+									simples d'administration.
+								</p>
+								<p class="item-note">
+									Dans ce projet centré sur Angular, il représente surtout une option complémentaire plutôt
+									qu'un choix principal.
+								</p>
+							</article>
+						</div>
+
+						<div class="category">
+							<h3>Paradigmes de programmation</h3>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Programmation orientée objet</h4>
+									<a class="source-link" href="https://docs.oracle.com/javase/tutorial/java/concepts/" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Le paradigme orienté objet permet de modéliser clairement les entités métier, les services et
+									les responsabilités du domaine.
+								</p>
+								<p class="item-note">
+									Il convient bien à un back-end structuré avec logique métier, persistance et règles de gestion.
+								</p>
+							</article>
+
+							<article class="item-card">
+								<div class="item-top">
+									<h4>Programmation déclarative via Spring</h4>
+									<a class="source-link" href="https://spring.io/projects/spring-framework" target="_blank" rel="noopener noreferrer">Source</a>
+								</div>
+								<p>
+									Les annotations comme <code>@RestController</code>, <code>@Service</code> et
+									<code>@Repository</code> rendent la configuration plus lisible et plus rapide à mettre en place.
+								</p>
+								<p class="item-note">
+									Cela aide à garder une architecture claire et cohérente avec les couches du projet.
+								</p>
+							</article>
+						</div>
+					</section>
 				</div>
-
-				<div class="category">
-					<h3>Paradigmes</h3>
-					<div class="paradigm-item">Réactif (RxJS)</div>
-					<div class="paradigm-item">Composantiel & Déclaratif</div>
-					<div class="paradigm-item">POO (TypeScript)</div>
-				</div>
-			</div>
-
-			<!-- Java -->
-			<div class="tech-section" id="java-section">
-				<h2>Java / Spring</h2>
-				<div class="category">
-					<h3>Librairies de test</h3>
-					<div class="library-item">JUnit 5 : standard unitaire</div>
-					<div class="library-item">Mockito : mocking</div>
-					<div class="library-item">TestContainers : intégration avec Docker</div>
-				</div>
-
-				<div class="category">
-					<h3>Frameworks / UI</h3>
-					<div class="library-item">Spring Boot : API REST</div>
-					<div class="library-item">Thymeleaf : moteur de templates</div>
-				</div>
-
-				<div class="category">
-					<h3>Paradigmes</h3>
-					<div class="paradigm-item">Orienté Objet</div>
-					<div class="paradigm-item">Déclaratif (annotations Spring)</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="sources">
-			<h3>Sources</h3>
-			<a href="https://angular.io/docs">Documentation Angular</a>
-			<a href="https://spring.io/projects/spring-boot">Spring Boot</a>
-			<a href="https://material.angular.io/">Angular Material</a>
-			<a href="https://junit.org/junit5/">JUnit 5</a>
-			<a href="https://www.cypress.io/">Cypress</a>
-			<a href="https://www.primefaces.org/primeng/">PrimeNG</a>
-			<a href="https://site.mockito.org/">Mockito</a>
-			<a href="https://www.testcontainers.org/">TestContainers</a>
-			<a href="https://jasmine.github.io/">Jasmine</a>
-			<a href="https://karma-runner.github.io/">Karma</a>
-			<a href="https://jestjs.io/">Jest</a>
-			<a href="https://rxjs.dev/">RxJS</a>
-			<a href="https://angular.dev/guide/architecture">Angular - Architecture Composantielle & Déclarative</a>
-
-		</div>
+			</section>
+		</main>
 	</div>
 
 	<script>
-		function showTech(tech) {
-			document.querySelectorAll('.tech-section').forEach(s => s.classList.remove('active'));
-			document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-			document.getElementById(tech + '-section').classList.add('active');
-			event.target.classList.add('active');
-		}
+		const buttons = document.querySelectorAll(".tab-btn");
+		const sections = document.querySelectorAll(".tech-section");
+
+		buttons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const tech = button.dataset.tech;
+
+				buttons.forEach((item) => item.classList.remove("active"));
+				sections.forEach((section) => section.classList.remove("active"));
+
+				button.classList.add("active");
+				document.getElementById(tech + "-section").classList.add("active");
+			});
+		});
 	</script>
 </body>
-
 </html>
